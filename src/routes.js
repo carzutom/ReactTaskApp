@@ -5,6 +5,8 @@ import { MinimalLayout } from 'layouts'
 
 // Pages
 import HomePage from 'pages/home'
+import ListPage from 'pages/list'
+import TasksPage from 'pages/tasks'
 import NotFound from 'pages/not-found'
 
 const routes = [
@@ -14,6 +16,8 @@ const routes = [
     children: [
       { index: true, element: <Navigate to='/home' replace={true} /> },
       { path: '/home', element: <HomePage /> },
+      { path: '/list', element: <ListPage /> },
+      { path: '/tasks', element: <TasksPage /> },
       { path: '*', element: <NotFound /> },
     ],
   },
